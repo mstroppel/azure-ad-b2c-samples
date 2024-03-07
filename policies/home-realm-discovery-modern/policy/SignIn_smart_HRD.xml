@@ -80,7 +80,7 @@
                 </OutputClaims>
             </ClaimsTransformation>
 
-            <ClaimsTransformation Id="CreateidentityProvidersCollection" TransformationMethod="AddItemToStringCollection">
+            <ClaimsTransformation Id="CreateIdentityProvidersCollection" TransformationMethod="AddItemToStringCollection">
                 <InputClaims>
                     <InputClaim ClaimTypeReferenceId="domainParameter" TransformationClaimType="item" />
                     <InputClaim ClaimTypeReferenceId="identityProviders" TransformationClaimType="collection" />
@@ -113,7 +113,7 @@
                         <OutputClaimsTransformation ReferenceId="ParseDomain" />
                         <OutputClaimsTransformation ReferenceId="DomainLookup" />
                         <OutputClaimsTransformation ReferenceId="CheckDomainParameterValue" />
-                        <OutputClaimsTransformation ReferenceId="CreateidentityProvidersCollection" />
+                        <OutputClaimsTransformation ReferenceId="CreateIdentityProvidersCollection" />
                     </OutputClaimsTransformations>
                     <UseTechnicalProfileForSessionManagement ReferenceId="SM-Noop" />
                 </TechnicalProfile>
